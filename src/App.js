@@ -1,61 +1,79 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import {Container, Row, Col, Button} from 'react-bootstrap'
-import './AttributeCard.js'
-import AttributeCard from './AttributeCard.js';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Container, Row, Col, Button, CardColumns } from "react-bootstrap";
+import "./components/AttributeCard.js";
+import AttributeCard from "./components/AttributeCard.js";
+import RandomizerForm from "./components/RandomizerForm.js";
+import Genres from "./data/Genres.json";
+import posed from "react-pose";
 
 class App extends React.Component {
   state = {
-    genreAmount: 1,
-    randomized: false
+    genreAmount: 0,
+    randomizedGenres: [],
   };
 
-  handleInputChange = (event) => {
-    const target = event.target;
-    const value = target.type === 'checkbox' ? target.checked : target.value;
-    const name = target.name;
-    console.log(name);
-
-    this.setState({
-      genreAmount: value
-    }, function () {
-      console.log(this.state.genreAmount);
-    });
+  componentDidMount() {
+    console.log(Genres);
   }
+
+  handleSubmit = (values) => {
+    alert(JSON.stringify(values, null, 2));
+
+    this.setState(
+      {
+        genreAmount:
+          values.genreAmount > Genres.length
+            ? Genres.length
+            : values.genreAmount,
+      },
+      () => this.generateGenres()
+    );
+  };
+
+  generateGenres = () => {
+    let arry = [];
+    let GenresLeft = Genres;
+    for (let i = 0; i < this.state.genreAmount; i++) {
+      const rand = Math.floor(Math.random() * GenresLeft.length);
+      console.log(rand);
+      arry.push(GenresLeft[rand]);
+      console.log(GenresLeft[rand]);
+
+      GenresLeft.splice(rand, 1);
+    }
+    this.setState(
+      {
+        randomizedGenres: arry,
+      },
+      () => console.log(this.state)
+    );
+  };
 
   createGenres = () => {
-    let table = []
-    let genres = ["FPS", "Strategy", "Walking Simulator"]
+    const listGenres = this.state.randomizedGenres.map((genre, index) => (
+      <Col key={index} lg={true}>
+        <AttributeCard randomElement={genre}></AttributeCard>
+      </Col>
+    ));
 
-    for (let i = 0; i < this.state.genreAmount; i++) {
-
-      table.push(<Col key={i}><AttributeCard randomElement={"Hello"}></AttributeCard></Col>)
-    }
-    return table
-  }
+    return listGenres;
+  };
 
   render() {
     return (
-      <Container>
+      <Container fluid={true}>
         <Row>
-          <h1>Genres:</h1>
+          <h1>Game Jam Randomizer:</h1>
         </Row>
         <Row>
           <Col>
-            <form>
-              <label name="gAmount">Genre Amount:</label>
-              <input type="number" id="gAmount" name="genreAmount" onChange={this.handleInputChange}/>
-            </form>
+            <RandomizerForm handleSubmit={this.handleSubmit} />
           </Col>
         </Row>
+        <hr />
         <Row>
-          {this.createGenres()}
-        </Row>
-        <hr/>
-        <Row>
-          <Col>
-            <Button onClick={() => this.setState({randomized: true})}>Randomize</Button>
-          </Col>
+            <CardColumns>{this.createGenres()}</CardColumns>
         </Row>
       </Container>
     );
