@@ -1,0 +1,18 @@
+[
+	{
+		"id": "genreAmount",
+		"name": "genreAmount",
+		"title": "Genres",
+		"label": "Genre Amount:",
+		"placeholder": "Enter genre amount...",
+		"data": [ "FPS", "Strategy", "Walking Simulator" ]
+	},
+	{
+		"id": "nounAmount",
+		"name": "nounAmount",
+		"title": "Nouns",
+		"label": "Noun Amount:",
+		"placeholder": "Enter noun amount...",
+		"data": [ "Apple", "Pear", "Orange", "Melon", "Banana", "Pineapple", "Coconut", "Raspberry" ]
+	}
+]

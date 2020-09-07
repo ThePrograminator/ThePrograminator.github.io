@@ -7,13 +7,7 @@ const OpacityAnimation = posed.div({
 	visible: { opacity: 1, transition: { duration: 1000 } }
 });
 
-const HoverText = posed.div({
-	hoverable: true,
-	init: { scale: 1 },
-	hover: { scale: 1.25 }
-});
-
-const AttributeCard = (props) => {
+const Header = () => {
 	const [ isVisible, setVisble ] = useState(false);
 
 	useEffect(() => {
@@ -22,15 +16,9 @@ const AttributeCard = (props) => {
 
 	return (
 		<OpacityAnimation pose={isVisible ? 'visible' : 'hidden'}>
-			<Card style={{ width: '18rem' }} className="justify-content-md-center">
-				<HoverText>
-					<Card.Body>
-						<Card.Title style={{ textAlign: 'center' }}>{props.randomElement}</Card.Title>
-					</Card.Body>
-				</HoverText>
-			</Card>
+			<h1 style={{ margin: 'auto', textAlign: 'center' }}>Game Jam Randomizer</h1>
 		</OpacityAnimation>
 	);
 };
 
-export default AttributeCard;
+export default Header;
