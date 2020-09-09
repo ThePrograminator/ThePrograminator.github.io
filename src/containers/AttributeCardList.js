@@ -18,18 +18,24 @@ const AttributeCardList = (props) => {
   return (
     <OpacityAnimation pose={isVisible ? "visible" : "hidden"}>
       {props.randomizedLists.map((randomList, listIndex) => (
-        <div>
-          <Row lg={true} key={listIndex}>
-            <h2 style={{ margin: "auto", textAlign: "center" }}>
-              {props.randomizedListsForms[listIndex].title}
-            </h2>
-            <CardColumns>
-              {randomList.map((randomElement, index) => (
-                <Col key={index} lg={true}>
-                  <AttributeCard randomElement={randomElement} />
-                </Col>
-              ))}
-            </CardColumns>
+        <div key={listIndex}>
+          <Row lg={true}>
+            <Col lg={true}>
+              <h2
+                style={{ margin: "auto", textAlign: "center", width: "200px" }}
+              >
+                {props.randomizedListsForms[listIndex].title}
+              </h2>
+            </Col>
+            <Col lg={true}>
+              <CardColumns>
+                {randomList.map((randomElement, index) => (
+                  <Col key={index} lg={true}>
+                    <AttributeCard randomElement={randomElement} />
+                  </Col>
+                ))}
+              </CardColumns>
+            </Col>
           </Row>
           <hr />
         </div>

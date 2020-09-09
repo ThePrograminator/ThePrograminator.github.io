@@ -26,25 +26,30 @@ class App extends React.Component {
   handleSubmit = (values) => {
     alert(JSON.stringify(values, null, 2));
 
+    let currentRandomizedLists = [];
+    let currentRandomizedListsForms = [];
+    Forms.forEach((form) => {
+      for (const key in form) {
+        if (form.hasOwnProperty(key) && key === "id") {
+          const element = form[key];
+          const amount = values[element];
+          if (amount > 0) {
+            console.log("key", element);
+            console.log("amount", amount);
+            currentRandomizedLists.push(
+              this.generateRandomizeList(form, amount)
+            );
+            currentRandomizedListsForms.push(form);
+          }
+        }
+      }
+    });
     this.setState(
       {
-        randomizedLists: [],
-        randomizedListsForms: [],
+        randomizedLists: currentRandomizedLists,
+        randomizedListsForms: currentRandomizedListsForms,
       },
-      () =>
-        Forms.forEach((form) => {
-          for (const key in form) {
-            if (form.hasOwnProperty(key) && key === "id") {
-              const element = form[key];
-              const amount = values[element];
-              if (amount > 0) {
-                console.log("key", element);
-                console.log("amount", amount);
-                this.generateRandomizeList(form, amount);
-              }
-            }
-          }
-        })
+      () => console.log("addToRandomizedList", this.state)
     );
   };
 
@@ -60,21 +65,7 @@ class App extends React.Component {
 
       dataLeft.splice(rand, 1);
     }
-    this.addToRandomizedList(arry, form);
-  };
-
-  addToRandomizedList = (randomizedList, form) => {
-    let currentRandomizedLists = this.state.randomizedLists;
-    let currentRandomizedListsForms = this.state.randomizedListsForms;
-    currentRandomizedLists.push(randomizedList);
-    currentRandomizedListsForms.push(form);
-    this.setState(
-      {
-        randomizedLists: currentRandomizedLists,
-        currentRandomizedListsForms: currentRandomizedListsForms,
-      },
-      () => console.log("addToRandomizedList", this.state)
-    );
+    return arry;
   };
 
   render() {
@@ -86,13 +77,17 @@ class App extends React.Component {
           </Col>
         </Row>
         <Row lg={true}>
-          <Col>
+          <Container fluid={true}>
             <RandomizerForm handleSubmit={this.handleSubmit} />
-          </Col>
+          </Container>
         </Row>
         <hr />
+
         {this.state.randomizedLists.length > 0 ? (
           <Container fluid>
+            <p style={{ textAlign: "center" }}>
+              Click on box to goto wikipedia page
+            </p>
             <AttributeCardList
               randomizedLists={this.state.randomizedLists}
               randomizedListsForms={this.state.randomizedListsForms}
