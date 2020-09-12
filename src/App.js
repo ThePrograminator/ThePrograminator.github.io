@@ -1,11 +1,9 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row, Col, Button, CardColumns } from "react-bootstrap";
-import "./components/AttributeCard.js";
+import { Container, Row, Col } from "react-bootstrap";
 import AttributeCardList from "./containers/AttributeCardList.js";
 import RandomizerForm from "./components/RandomizerForm.js";
 import Header from "./components/Header.js";
-import Genres from "./data/Genres.json";
 import Forms from "./data/Forms.json";
 
 const ConsoleLog = (props) => {
@@ -19,12 +17,8 @@ class App extends React.Component {
     randomizedListsForms: [],
   };
 
-  componentDidMount() {
-    console.log(Genres);
-  }
-
   handleSubmit = (values) => {
-    alert(JSON.stringify(values, null, 2));
+    //alert(JSON.stringify(values, null, 2));
 
     let currentRandomizedLists = [];
     let currentRandomizedListsForms = [];
