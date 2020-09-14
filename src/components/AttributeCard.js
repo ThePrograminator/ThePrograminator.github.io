@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Card } from "react-bootstrap";
 import posed from "react-pose";
+import { ThemeContext } from "styled-components";
 
 const OpacityAnimation = posed.div({
   hidden: { opacity: 0 },
@@ -11,7 +12,7 @@ const HoverText = posed.div({
   hoverable: true,
   pressable: true,
   init: { scale: 1 },
-  hover: { scale: 1.25, color: "#000000" },
+  hover: { scale: 1.25 },
   press: {
     scale: 1.1,
   },
@@ -19,6 +20,7 @@ const HoverText = posed.div({
 
 const AttributeCard = (props) => {
   const [isVisible, setVisble] = useState(false);
+  const themeContext = useContext(ThemeContext);
 
   useEffect(() => {
     setVisble(true);
@@ -27,6 +29,7 @@ const AttributeCard = (props) => {
   return (
     <OpacityAnimation pose={isVisible ? "visible" : "hidden"}>
       <Card
+        bg={themeContext.theme}
         style={{ width: "18rem" }}
         className="justify-content-md-center"
         onClick={() =>
