@@ -1,8 +1,7 @@
 {
-  "homepage": "http://ThePrograminator.github.io/game-jam-randomizer",
+  "homepage": "http://ThePrograminator.github.io/ThePrograminator.github.io",
   "name": "game-jam-randomizer",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
