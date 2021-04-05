@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.edf2ea29.chunk.css",
-    "main.js": "/static/js/main.83689a92.chunk.js",
-    "main.js.map": "/static/js/main.83689a92.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.ea8e77dc.js",
-    "runtime-main.js.map": "/static/js/runtime-main.ea8e77dc.js.map",
-    "static/css/2.d9ad5f5c.chunk.css": "/static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.399a69b4.chunk.js": "/static/js/2.399a69b4.chunk.js",
-    "static/js/2.399a69b4.chunk.js.map": "/static/js/2.399a69b4.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.13a494c9cb1bffe0126aaaa1796b771c.js": "/precache-manifest.13a494c9cb1bffe0126aaaa1796b771c.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.d9ad5f5c.chunk.css.map": "/static/css/2.d9ad5f5c.chunk.css.map",
-    "static/css/main.edf2ea29.chunk.css.map": "/static/css/main.edf2ea29.chunk.css.map",
-    "static/js/2.399a69b4.chunk.js.LICENSE.txt": "/static/js/2.399a69b4.chunk.js.LICENSE.txt"
+    "main.css": "/ThePrograminator.github.io/static/css/main.edf2ea29.chunk.css",
+    "main.js": "/ThePrograminator.github.io/static/js/main.74abcc48.chunk.js",
+    "main.js.map": "/ThePrograminator.github.io/static/js/main.74abcc48.chunk.js.map",
+    "runtime-main.js": "/ThePrograminator.github.io/static/js/runtime-main.006c3c82.js",
+    "runtime-main.js.map": "/ThePrograminator.github.io/static/js/runtime-main.006c3c82.js.map",
+    "static/css/2.d9ad5f5c.chunk.css": "/ThePrograminator.github.io/static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.27717968.chunk.js": "/ThePrograminator.github.io/static/js/2.27717968.chunk.js",
+    "static/js/2.27717968.chunk.js.map": "/ThePrograminator.github.io/static/js/2.27717968.chunk.js.map",
+    "index.html": "/ThePrograminator.github.io/index.html",
+    "precache-manifest.90f14eb41bc640cb2f2bcd6d6e17c2e0.js": "/ThePrograminator.github.io/precache-manifest.90f14eb41bc640cb2f2bcd6d6e17c2e0.js",
+    "service-worker.js": "/ThePrograminator.github.io/service-worker.js",
+    "static/css/2.d9ad5f5c.chunk.css.map": "/ThePrograminator.github.io/static/css/2.d9ad5f5c.chunk.css.map",
+    "static/css/main.edf2ea29.chunk.css.map": "/ThePrograminator.github.io/static/css/main.edf2ea29.chunk.css.map",
+    "static/js/2.27717968.chunk.js.LICENSE.txt": "/ThePrograminator.github.io/static/js/2.27717968.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.ea8e77dc.js",
+    "static/js/runtime-main.006c3c82.js",
     "static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.399a69b4.chunk.js",
+    "static/js/2.27717968.chunk.js",
     "static/css/main.edf2ea29.chunk.css",
-    "static/js/main.83689a92.chunk.js"
+    "static/js/main.74abcc48.chunk.js"
   ]
 }
