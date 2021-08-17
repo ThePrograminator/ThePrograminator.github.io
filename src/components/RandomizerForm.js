@@ -38,7 +38,10 @@ const RandomizerForm = (props) => {
       }) => (
         <Form onSubmit={handleSubmit}>
           {Forms.map((form, index) => (
-            <Form.Row style={{ margin: "auto", maxWidth: "1000px" }} key={index}>
+            <Form.Row
+              style={{ margin: "auto", maxWidth: "1000px" }}
+              key={index}
+            >
               <Form.Group
                 controlId={form.id}
                 style={{ margin: "auto", width: "100%", maxWidth: "600px" }}
@@ -68,6 +71,9 @@ const RandomizerForm = (props) => {
               Submit
             </Button>
           </Form.Row>
+          <Form.Text muted style={{ textAlign: "center" }}>
+            (Might need to scroll after clicking)
+          </Form.Text>
         </Form>
       )}
     </Formik>
