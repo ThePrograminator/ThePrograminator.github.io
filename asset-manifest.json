@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.edf2ea29.chunk.css",
-    "main.js": "/static/js/main.83689a92.chunk.js",
-    "main.js.map": "/static/js/main.83689a92.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.ea8e77dc.js",
-    "runtime-main.js.map": "/static/js/runtime-main.ea8e77dc.js.map",
-    "static/css/2.d9ad5f5c.chunk.css": "/static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.399a69b4.chunk.js": "/static/js/2.399a69b4.chunk.js",
-    "static/js/2.399a69b4.chunk.js.map": "/static/js/2.399a69b4.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.13a494c9cb1bffe0126aaaa1796b771c.js": "/precache-manifest.13a494c9cb1bffe0126aaaa1796b771c.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.d9ad5f5c.chunk.css.map": "/static/css/2.d9ad5f5c.chunk.css.map",
-    "static/css/main.edf2ea29.chunk.css.map": "/static/css/main.edf2ea29.chunk.css.map",
-    "static/js/2.399a69b4.chunk.js.LICENSE.txt": "/static/js/2.399a69b4.chunk.js.LICENSE.txt"
+    "main.css": "/game-jam-randomizer/static/css/main.9dd5bc2b.chunk.css",
+    "main.js": "/game-jam-randomizer/static/js/main.851a5fd9.chunk.js",
+    "main.js.map": "/game-jam-randomizer/static/js/main.851a5fd9.chunk.js.map",
+    "runtime-main.js": "/game-jam-randomizer/static/js/runtime-main.0f180455.js",
+    "runtime-main.js.map": "/game-jam-randomizer/static/js/runtime-main.0f180455.js.map",
+    "static/css/2.46b578d6.chunk.css": "/game-jam-randomizer/static/css/2.46b578d6.chunk.css",
+    "static/js/2.064f6da2.chunk.js": "/game-jam-randomizer/static/js/2.064f6da2.chunk.js",
+    "static/js/2.064f6da2.chunk.js.map": "/game-jam-randomizer/static/js/2.064f6da2.chunk.js.map",
+    "index.html": "/game-jam-randomizer/index.html",
+    "precache-manifest.6019c952d21f7da27b4a533b122efc92.js": "/game-jam-randomizer/precache-manifest.6019c952d21f7da27b4a533b122efc92.js",
+    "service-worker.js": "/game-jam-randomizer/service-worker.js",
+    "static/css/2.46b578d6.chunk.css.map": "/game-jam-randomizer/static/css/2.46b578d6.chunk.css.map",
+    "static/css/main.9dd5bc2b.chunk.css.map": "/game-jam-randomizer/static/css/main.9dd5bc2b.chunk.css.map",
+    "static/js/2.064f6da2.chunk.js.LICENSE.txt": "/game-jam-randomizer/static/js/2.064f6da2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.ea8e77dc.js",
-    "static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.399a69b4.chunk.js",
-    "static/css/main.edf2ea29.chunk.css",
-    "static/js/main.83689a92.chunk.js"
+    "static/js/runtime-main.0f180455.js",
+    "static/css/2.46b578d6.chunk.css",
+    "static/js/2.064f6da2.chunk.js",
+    "static/css/main.9dd5bc2b.chunk.css",
+    "static/js/main.851a5fd9.chunk.js"
   ]
 }
