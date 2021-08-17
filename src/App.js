@@ -99,9 +99,9 @@ class App extends React.Component {
               <Header themeToggler={this.themeToggler} />
             </Col>
           </Row>
-          <Row lg={true}>
+          <Row lg={true} style={{margin: "20px"}}>
             <Container fluid={true}>
-              <RandomizerForm handleSubmit={this.handleSubmit} />
+                <RandomizerForm handleSubmit={this.handleSubmit} />
             </Container>
           </Row>
           <hr />

@@ -38,15 +38,15 @@ const RandomizerForm = (props) => {
       }) => (
         <Form onSubmit={handleSubmit}>
           {Forms.map((form, index) => (
-            <Form.Row style={{ margin: "auto" }} key={index}>
+            <Form.Row style={{ margin: "auto", maxWidth: "1000px" }} key={index}>
               <Form.Group
                 controlId={form.id}
-                style={{ margin: "auto", width: "50%" }}
+                style={{ margin: "auto", width: "100%", maxWidth: "600px" }}
               >
-                <Col lg={true}>
+                <Col sm={true}>
                   <Form.Label className="text-center">{form.label}</Form.Label>
                 </Col>
-                <Col lg={true}>
+                <Col md={true}>
                   <Form.Control
                     name={form.name}
                     type="Number"

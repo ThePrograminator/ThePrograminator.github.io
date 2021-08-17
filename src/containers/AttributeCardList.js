@@ -20,9 +20,14 @@ const AttributeCardList = (props) => {
       {props.randomizedLists.map((randomList, listIndex) => (
         <div key={listIndex}>
           <Row lg={true}>
-            <Col lg={true}>
+            <Col sm={true}>
               <h2
-                style={{ margin: "auto", textAlign: "center", width: "200px" }}
+                style={{
+                  margin: "auto",
+                  textAlign: "center",
+                  width: "200px",
+                  maxWidth: "200px",
+                }}
               >
                 {props.randomizedListsForms[listIndex].title}
               </h2>
